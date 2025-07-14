@@ -2,7 +2,6 @@ divContainer = document.querySelector(".grid-container");
 let grid = [[], [], [], []];
 for (let i = 0; i < 16; i++) {
     const newDiv = document.createElement('div')
-    newDiv.textContent = `${i+1}`;
     newDiv.classList.add('cell');
     newDiv.id = `cell-${i+1}`;
     grid[Math.floor(i/4)].push(newDiv);
