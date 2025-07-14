@@ -1,6 +1,5 @@
 divContainer = document.querySelector(".grid-container");
 createGrid(16);
-
 function hovered(cell) {
     cell.style.backgroundColor = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
     cell.classList.add("hovered");
@@ -49,5 +48,22 @@ function createGrid(size) {
             newRow.appendChild(cell);
         }
         divContainer.appendChild(newRow);
+    }
+}
+
+function switchTheme() {
+    let themeButton = document.querySelector(".theme");
+    let currentTheme = themeButton.textContent;
+
+    if (currentTheme === "Dark Mode") {
+        document.querySelectorAll("*").forEach(element => {
+            element.classList.add("dark"); 
+        });
+        themeButton.textContent = "Light Mode";  
+    } else {
+        document.querySelectorAll("*").forEach(element => {
+            element.classList.remove("dark");  
+        });
+        themeButton.textContent = "Dark Mode"; 
     }
 }
