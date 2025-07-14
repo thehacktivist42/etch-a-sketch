@@ -21,6 +21,7 @@ function clearGrid() {
     let filledCells = document.querySelectorAll(".hovered");
     filledCells.forEach(cell => {
         cell.classList.remove("hovered");
+        cell.style.backgroundColor = "";
     });
 }
 
