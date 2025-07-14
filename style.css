@@ -1,18 +1,19 @@
 .cell {
-    border-style: solid;
-    width: 150px;
-    height: 150px;
+    border: none;
+    width: 50px;
+    height: 50px;
 }
 .row {
     display: flex;
 }
 .grid-container {
-    max-width: 600px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    border-style: solid;;
 }
 .hovered {
     background-color: black;
