@@ -2,7 +2,8 @@ divContainer = document.querySelector(".grid-container");
 createGrid(16);
 
 function hovered(cell) {
-    cell.classList.add('hovered');
+    cell.style.backgroundColor = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
+    cell.classList.add("hovered");
 }
 
 function resize() {
