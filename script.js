@@ -12,7 +12,15 @@ function resize() {
         resize();
     }
     createGrid(size);
-    document.querySelector(".current-size").textContent = `Current Size: ${size} x ${size}`;
+    document.querySelector(".current-size").textContent = `Current Size: ${size} x ${size}`;    
+}
+
+function clearGrid() {
+    console.log("Clearing...")
+    let filledCells = document.querySelectorAll(".hovered");
+    filledCells.forEach(cell => {
+        cell.classList.remove("hovered");
+    });
 }
 
 function createGrid(size) {
